@@ -1,30 +1,37 @@
-// Function to show the selected section and hide the others
 function showSection(sectionId) {
-    // Hide all sections
+    // Hide all sections with fade-out effect
     const sections = document.querySelectorAll('.section');
     sections.forEach(section => {
-        section.style.display = 'none';
+        section.classList.remove('visible');
+        setTimeout(() => {
+            section.style.display = 'none';
+        }, 500);
     });
 
-    // Display the selected section
-    document.getElementById(sectionId).style.display = 'flex';
-
-    // Close the menu after clicking a link in mobile view
-    toggleMenu();
+    const sectionToShow = document.getElementById(sectionId);
+    setTimeout(() => {
+        sectionToShow.style.display = 'flex';
+        sectionToShow.classList.add('visible');
+    }, 500); 
 }
 
-// Automatically display the home section on page load and hide others
+
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('.section');
     sections.forEach(section => {
-        section.style.display = 'none'; // Hide all sections
+        section.style.display = 'none'; 
+        section.classList.remove('visible');
     });
-    document.getElementById('home').style.display = 'flex'; // Show the home section
+    const homeSection = document.getElementById('home');
+    homeSection.style.display = 'flex'; 
+    homeSection.classList.add('visible'); 
 });
 
-// Function to toggle the burger menu
+
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
+    const burger = document.querySelector('.burger');
     navLinks.classList.toggle('active');
+    burger.classList.toggle('active');
 }
 
