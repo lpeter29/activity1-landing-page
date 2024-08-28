@@ -27,7 +27,7 @@ nav {
 }
 
 .logo {
-    color: #ff8c42;
+    color: #f4ad49;
     font-size: 24px;
     font-weight: bold;
     display: flex;
@@ -60,7 +60,7 @@ nav {
 }
 
 .nav-links li a:hover {
-    color: #ff8c42;
+    color: #f4ad49;
     transform: translateY(-3px);
 }
 
@@ -123,12 +123,21 @@ nav {
 
 .hero-content p {
     font-size: 18px;
-    padding: 0px 40px;
     text-align: justify;
-    color: #666;
+    background-color: #f4ad49;
+    border-radius: 20px;
+    color: #555;
+    padding: 10px 15px;
 }
 
 /* About Section */
+
+#about p{
+    background-color: #f4ad49;
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+
 .about-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -150,7 +159,10 @@ nav {
 
 .about-grid-item p {
     font-size: 16px;
+    background-color: #f4ad49;
+    border-radius: 20px;
     color: #555;
+    padding: 10px 15px;
     text-align: justify;
 }
 
@@ -185,7 +197,10 @@ nav {
 
 .tools-grid-item p {
     font-size: 16px;
+    background-color: #f4ad49;
+    border-radius: 20px;
     color: #555;
+    padding: 10px 15px;
     text-align: justify;
 }
 
