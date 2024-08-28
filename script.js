@@ -1,19 +1,24 @@
 function showSection(sectionId) {
-    // Hide all sections with fade-out effect
     const sections = document.querySelectorAll('.section');
+    
     sections.forEach(section => {
-        section.classList.remove('visible');
-        setTimeout(() => {
-            section.style.display = 'none';
-        }, 500);
+        if (section.classList.contains('visible')) {
+            section.classList.remove('visible');
+            setTimeout(() => {
+                section.style.display = 'none';
+            }, 500); 
+        }
     });
 
-    const sectionToShow = document.getElementById(sectionId);
     setTimeout(() => {
+        const sectionToShow = document.getElementById(sectionId);
         sectionToShow.style.display = 'flex';
-        sectionToShow.classList.add('visible');
-    }, 500); 
+        setTimeout(() => {
+            sectionToShow.classList.add('visible');
+        }, 10); 
+    }, 500);
 }
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
