@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importance of Web Development</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!----------------------------------------- Nav Bar ----------------------------------------->
+    <nav>
+        <div class="logo">
+            <i class="fas fa-code"></i>
+            WEB DEV
+        </div>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="showSection('home')"><i class="fas fa-home"></i> HOME</a></li>
+            <li><a href="#" onclick="showSection('about')"><i class="fas fa-info-circle"></i> ABOUT</a></li>
+            <li><a href="#" onclick="showSection('tools')"><i class="fas fa-wrench"></i> TOOLS</a></li>
+        </ul>
+    </nav>
+
+    <!----------------------------------------- Hero Section ----------------------------------------->
+    <section id="home" class="section">
+        <div class="hero-content">
+            <h1>What is website development?</h1>
+            <p>Web development involves creating and maintaining websites, web applications, 
+                and other online platforms using various programming languages, frameworks, and tools.</p>
+            <img src="WebDev.jpg">
+        </div>
+    </section>
+
+    <!----------------------------------------- About Section ----------------------------------------->
+    <section id="about" class="section hidden">
+        <h1>About Web Development</h1>
+        <p>Web development is crucial in today's digital world. It allows businesses to establish an online presence, reach a wider audience, and provide essential information and services.</p>
+        <div class="about-grid">
+            <div class="about-grid-item">
+                <img src="Connection.jpg">
+                <p>Web development breaks geographical barriers, allowing businesses, institutions, and individuals to reach a global audience easily.</p>
+            </div>
+            <div class="about-grid-item">
+                <img src="Info.jpg">
+                <p>Websites are crucial for spreading information quickly and efficiently, making news, updates, and educational content accessible worldwide.</p>
+            </div>
+            <div class="about-grid-item">
+                <img src="Idea.png">
+                <p>Web development encourages innovation, allowing creatives to conceptualize and implement unique ideas in the digital space.</p>
+            </div>
+            <div class="about-grid-item">
+                <img src="Job.jpeg">
+                <p>The field of web development offers vast career opportunities and a high demand for skilled professionals, creating significant job prospects in the IT sector.</p>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------------------------- Tools Section ----------------------------------------->
+    <section id="tools" class="section hidden">
+        <h1>Essential Tools for Web Development</h1>
+        <div class="tools-grid">
+            <div class="tools-grid-item">
+                <img src="VScode.png">
+                <p>Multiple programming languages are supported by VS Code, making it the perfect tool for developers working on a variety of projects.</p>
+            </div>
+            <div class="tools-grid-item">
+                <img src="Github.png">
+                <p>Git repository hosting service GitHub has grown to become the go-to place for developers to save, distribute, and work together on projects.</p>
+            </div>
+            <div class="tools-grid-item">
+                <img src="Bootstrap.png">
+                <p>Bootstrap's adaptable grid system, which dynamically adjusts the layout to different screen sizes and guarantees a consistent user experience across devices, is one of its core features.</p>
+            </div>
+            <div class="tools-grid-item">
+                <img src="DevTools.jpeg">
+                <p>A wide range of tools is available through Chrome DevTools, including DOM inspection, network monitoring, JavaScript debugging, performance evaluation, and others.</p>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------------------------- Footer ----------------------------------------->
+    <footer>
+        <p>&copy; 2024 Web Development by Peter Paul F. Eclavea. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
