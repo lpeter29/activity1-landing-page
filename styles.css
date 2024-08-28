@@ -51,12 +51,17 @@ nav {
     align-items: center;
 }
 
-.nav-links li a i {
-    margin-right: 8px;
+.nav-links li a {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
 }
 
 .nav-links li a:hover {
     color: #ff8c42;
+    transform: translateY(-3px);
 }
 
 /* Burger Menu Styles */
@@ -74,20 +79,33 @@ nav {
     transition: all 0.3s ease;
 }
 
-/* Hide and Show Sections */
-.hidden {
-    display: none;
+.burger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
+.burger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
 /* Hero Section */
+
 .section {
     padding: 40px;
     flex: 1;
-    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.section.visible {
+    opacity: 1;
 }
 
 .section img {
@@ -134,6 +152,15 @@ nav {
     font-size: 16px;
     color: #555;
     text-align: justify;
+}
+
+.about-grid-item img, .tools-grid-item img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.about-grid-item img:hover, .tools-grid-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Tools Section */
@@ -219,11 +246,11 @@ footer {
     }
 
     .about-grid, .tools-grid {
-        grid-template-columns: 1fr; /* Adjust to single column for smaller screens */
+        grid-template-columns: 1fr; 
     }
 
     h1 {
-        font-size: 32px; /* Smaller font size for h1 elements */
+        font-size: 32px;
     }
 
     footer {
